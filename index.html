@@ -67,6 +67,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .action-badge.low{background:var(--success)}
 .action-title{font-weight:600;font-size:.95rem}
 .action-body{font-size:.85rem;color:var(--text-light)}
+/* Carousel */
+.carousel{position:relative;overflow:hidden;border-radius:12px;background:#1a1a2e}
+.carousel-track{display:flex;gap:16px;overflow-x:auto;scroll-behavior:smooth;padding:16px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-slide{flex:0 0 200px;text-align:center}
+.carousel-slide img{width:200px;height:356px;object-fit:cover;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.carousel-caption{font-size:.72rem;color:#ccc;margin-top:6px;line-height:1.3}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.9);border:none;width:32px;height:32px;border-radius:50%;font-size:1.2rem;cursor:pointer;z-index:5;box-shadow:0 2px 6px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center}
+.carousel-prev{left:6px}
+.carousel-next{right:6px}
+.carousel-btn:hover{background:#fff}
 /* Metric highlight */
 .metric-box{display:inline-flex;flex-direction:column;align-items:center;padding:12px 16px;background:rgba(192,57,43,.08);border-radius:10px;margin:4px}
 .metric-box .val{font-size:1.3rem;font-weight:800;color:var(--primary)}
@@ -317,6 +328,232 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
       <div style="padding:16px;background:rgba(231,76,60,.06);border-radius:10px;border-left:3px solid var(--danger)">
         <div style="font-weight:700;color:var(--danger);margin-bottom:6px">3. 缺乏视觉质感</div>
         <div style="font-size:.85rem;color:var(--text-light)">Girl Boss的视觉应该是：精致穿搭、都市场景、办公室/社交场合。当前内容多为家居自拍，视觉质感与"大女主"人设严重不符。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== Section 3.5: 视频案例帧拆解 ==================== -->
+<div class="section" id="video-cases">
+  <h2 class="section-title">视频案例帧拆解</h2>
+  <p style="color:var(--text-light);margin-bottom:20px">每支关键视频的实际帧画面 — 滑动查看分析时提取的关键帧，所有描述严格基于画面内容</p>
+
+  <!-- CASE 1: Old Money Benchmark -->
+  <div style="margin-bottom:32px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div>
+        <span style="background:var(--success);color:#fff;padding:3px 10px;border-radius:10px;font-size:.75rem;font-weight:700">BEST CASE</span>
+        <span style="font-weight:700;font-size:1.05rem;margin-left:8px">@priscillasetio · PGC - Old Money</span>
+      </div>
+      <div style="font-size:.8rem;color:var(--text-light)">100k-500k · ROI 5.60 · 花费$164 · GMV $1,028</div>
+    </div>
+    <div class="carousel" id="carousel-priscilla">
+      <button class="carousel-btn carousel-prev" onclick="scrollCarousel('carousel-priscilla',-1)">‹</button>
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="frames/priscillasetio_oldmoney_t00.jpg" alt="t=0s"><div class="carousel-caption">t=0s · 黑色西装特写，文字Hook："GAK PERLU KASIH TAU ORANG KM BANYAK DUIT"（不需要告诉别人你有钱），闭眼自信开场</div></div>
+        <div class="carousel-slide"><img src="frames/priscillasetio_oldmoney_t01.jpg" alt="t=11s"><div class="carousel-caption">t=11s · 手持Bodibreze Leona红色瓶身贴近脖子，展示产品+使用场景，自然光+黑色西装</div></div>
+        <div class="carousel-slide"><img src="frames/priscillasetio_oldmoney_t02.jpg" alt="t=23s"><div class="carousel-caption">t=23s · 产品正面展示+字幕"SPL pasti sampe ke hidung org"（香味一定传到别人鼻子），手戴银色手表凸显质感</div></div>
+        <div class="carousel-slide"><img src="frames/priscillasetio_oldmoney_t03.jpg" alt="t=34s"><div class="carousel-caption">t=34s · 自信讲解中，字幕"kebesokan malam nya masih kecium DI MOBIL DONG"（第二天在车里还能闻到），手势强调持久力</div></div>
+        <div class="carousel-slide"><img src="frames/priscillasetio_oldmoney_t04.jpg" alt="t=46s"><div class="carousel-caption">t=46s · 字幕出现"bold, femi[nine]"描述香调，手持产品侧面展示，维持Old Money视觉一致性</div></div>
+        <div class="carousel-slide"><img src="frames/priscillasetio_oldmoney_t05.jpg" alt="t=57s"><div class="carousel-caption">t=57s · 结尾微笑+V手势+产品合影，Bodibreze标签清晰可见，自然收尾带call-to-action</div></div>
+      </div>
+      <button class="carousel-btn carousel-next" onclick="scrollCarousel('carousel-priscilla',1)">›</button>
+    </div>
+    <div class="card" style="margin-top:12px;border-left:4px solid var(--success)">
+      <div style="font-weight:700;color:var(--success);margin-bottom:6px">为什么这支是标杆？（基于实际画面）</div>
+      <ul style="font-size:.85rem;color:var(--text-light);padding-left:20px;line-height:1.8">
+        <li><strong>Hook极强：</strong>开场文字"不需要告诉别人你有钱"直击Old Money心理，不说产品先说态度</li>
+        <li><strong>视觉一致：</strong>全程黑色西装+后梳发型+银色手表+红唇，画面精致度匹配"大女主"人设</li>
+        <li><strong>产品自然融入：</strong>香水瓶始终在手中/颈部，不是硬推而是"使用中展示"</li>
+        <li><strong>卖点具体化：</strong>字幕提到"香味传到别人鼻子"+"第二天车里还能闻到"，用场景证明持久</li>
+        <li><strong>"bold, feminine"收尾：</strong>用关键词总结香调人设，与Girl Boss完美对齐</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CASE 2: Girl Boss - kintanumari -->
+  <div style="margin-bottom:32px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div>
+        <span style="background:var(--warning);color:#fff;padding:3px 10px;border-radius:10px;font-size:.75rem;font-weight:700">GIRL BOSS</span>
+        <span style="font-weight:700;font-size:1.05rem;margin-left:8px">@kintanumari · PGC - Girl Boss</span>
+      </div>
+      <div style="font-size:.8rem;color:var(--text-light)">小于10k · ROI 0.15 · 花费$67.67 · GMV $10.36</div>
+    </div>
+    <div class="carousel" id="carousel-kintanumari">
+      <button class="carousel-btn carousel-prev" onclick="scrollCarousel('carousel-kintanumari',-1)">‹</button>
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="frames/kintanumari_girlboss_t00.jpg" alt="t=0s"><div class="carousel-caption">t=0s · 橄榄绿西装+黑色V领内搭+水晶耳环，面对镜头开场，家居白墙背景</div></div>
+        <div class="carousel-slide"><img src="frames/kintanumari_girlboss_t01.jpg" alt="t=8s"><div class="carousel-caption">t=8s · 手持红色Leona瓶身，字幕"looking for a scent"（在找一款香），@kintanumari 2025水印</div></div>
+        <div class="carousel-slide"><img src="frames/kintanumari_girlboss_t02.jpg" alt="t=16s"><div class="carousel-caption">t=16s · 展示Bodibreze Leona瓶身特写，字幕"she got"，微笑表情，瓶身标签清晰</div></div>
+        <div class="carousel-slide"><img src="frames/kintanumari_girlboss_t03.jpg" alt="t=24s"><div class="carousel-caption">t=24s · 字幕"Bodibreze | Leona Bold, Sweet, Musky"+荔枝/红色植物拼贴图展示香调意象</div></div>
+        <div class="carousel-slide"><img src="frames/kintanumari_girlboss_t04.jpg" alt="t=32s"><div class="carousel-caption">t=32s · 侧脸微笑持瓶pose，保持"Bodibreze | Leona Bold, Sweet, Musky"字幕</div></div>
+        <div class="carousel-slide"><img src="frames/kintanumari_girlboss_t05.jpg" alt="t=40s"><div class="carousel-caption">t=40s · 结尾正面微笑+产品展示，蓝色指甲+戒指细节，表情自然亲和</div></div>
+      </div>
+      <button class="carousel-btn carousel-next" onclick="scrollCarousel('carousel-kintanumari',1)">›</button>
+    </div>
+    <div class="card" style="margin-top:12px;border-left:4px solid var(--warning)">
+      <div style="font-weight:700;color:var(--warning);margin-bottom:6px">问题诊断（基于实际画面）</div>
+      <ul style="font-size:.85rem;color:var(--text-light);padding-left:20px;line-height:1.8">
+        <li><strong>穿搭有Girl Boss感：</strong>西装+耳环+深色唇是对的，但白墙家居背景削弱了"成功女性"氛围</li>
+        <li><strong>Hook太软：</strong>"looking for a scent"是通用搜香需求，没有Old Money那种"态度宣言"式开场</li>
+        <li><strong>香调拼贴有创意：</strong>荔枝/植物意象图是好的可视化手段，但占据了讲述Girl Boss故事的时间</li>
+        <li><strong>缺场景验证：</strong>没有"办公室/社交场合使用"的画面，无法让观众代入Girl Boss生活</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CASE 3: Girl Boss - angiezeant -->
+  <div style="margin-bottom:32px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div>
+        <span style="background:var(--danger);color:#fff;padding:3px 10px;border-radius:10px;font-size:.75rem;font-weight:700">FAIL CASE</span>
+        <span style="font-weight:700;font-size:1.05rem;margin-left:8px">@angiezeant · PGC - Girlboss</span>
+      </div>
+      <div style="font-size:.8rem;color:var(--text-light)">10K-50k · ROI 0 · 花费$5.98 · GMV $0</div>
+    </div>
+    <div class="carousel" id="carousel-angiezeant">
+      <button class="carousel-btn carousel-prev" onclick="scrollCarousel('carousel-angiezeant',-1)">‹</button>
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="frames/angiezeant_girlboss_t00.jpg" alt="t=0s"><div class="carousel-caption">t=0s · 手持Leona红瓶，字幕Hook："this is what 'wanita sukses' smells like"（成功女性闻起来的味道），紫色宽松上衣</div></div>
+        <div class="carousel-slide"><img src="frames/angiezeant_girlboss_t01.jpg" alt="t=7s"><div class="carousel-caption">t=7s · 面对镜头讲解中，家居室内+植物背景，紫色休闲装，无西装/正装元素</div></div>
+        <div class="carousel-slide"><img src="frames/angiezeant_girlboss_t02.jpg" alt="t=14s"><div class="carousel-caption">t=14s · 画面叠加调香师Nikolaj Koralewicz (Symrise)照片，讲解品牌故事/专业背景</div></div>
+        <div class="carousel-slide"><img src="frames/angiezeant_girlboss_t03.jpg" alt="t=20s"><div class="carousel-caption">t=20s · 回到讲解，紫色上衣+家居场景，手势辅助讲解中</div></div>
+        <div class="carousel-slide"><img src="frames/angiezeant_girlboss_t04.jpg" alt="t=27s"><div class="carousel-caption">t=27s · 微笑面对镜头，头发自然卷放，轻松家居氛围与"wanita sukses"不匹配</div></div>
+        <div class="carousel-slide"><img src="frames/angiezeant_girlboss_t05.jpg" alt="t=34s"><div class="carousel-caption">t=34s · 结尾半身展示，紫色宽松上衣无正装感，整体视觉偏"邻家女孩"而非"成功女性"</div></div>
+      </div>
+      <button class="carousel-btn carousel-next" onclick="scrollCarousel('carousel-angiezeant',1)">›</button>
+    </div>
+    <div class="card" style="margin-top:12px;border-left:4px solid var(--danger)">
+      <div style="font-weight:700;color:var(--danger);margin-bottom:6px">失败原因（基于实际画面）</div>
+      <ul style="font-size:.85rem;color:var(--text-light);padding-left:20px;line-height:1.8">
+        <li><strong>Hook文案是对的但画面不对：</strong>"wanita sukses smells like"文案抓人，但穿着紫色休闲衫在家里讲完全没有成功女性的视觉支撑</li>
+        <li><strong>中间插入调香师照片：</strong>Nikolaj Koralewicz的专业背书是好的素材，但打断了Girl Boss叙事</li>
+        <li><strong>全程无场景切换：</strong>同一个家居背景到底，没有办公室/车/社交等"wanita sukses"的生活场景</li>
+        <li><strong>对比Old Money：</strong>priscillasetio穿黑色西装戴手表说"不需要炫富"，angiezeant穿紫色T恤说"成功女性的味道"——画面说服力差距巨大</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CASE 4: Girlboss Perfume - gessicaamori -->
+  <div style="margin-bottom:32px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div>
+        <span style="background:var(--danger);color:#fff;padding:3px 10px;border-radius:10px;font-size:.75rem;font-weight:700">FAIL CASE</span>
+        <span style="font-weight:700;font-size:1.05rem;margin-left:8px">@gessicaamori · PGC - Girlboss Perfume</span>
+      </div>
+      <div style="font-size:.8rem;color:var(--text-light)">小于10k · ROI 0 · 花费$17.87 · GMV $0</div>
+    </div>
+    <div class="carousel" id="carousel-gessicaamori">
+      <button class="carousel-btn carousel-prev" onclick="scrollCarousel('carousel-gessicaamori',-1)">‹</button>
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="frames/gessicaamori_girlboss_t00.jpg" alt="t=0s"><div class="carousel-caption">t=0s · 字幕"Fresh but make it Elegant"，酒红色吊带+红唇，卧室自拍场景</div></div>
+        <div class="carousel-slide"><img src="frames/gessicaamori_girlboss_t01.jpg" alt="t=10s"><div class="carousel-caption">t=10s · 同一场景继续讲解，酒红吊带+卧室背景，无产品出现</div></div>
+        <div class="carousel-slide"><img src="frames/gessicaamori_girlboss_t02.jpg" alt="t=19s"><div class="carousel-caption">t=19s · 保持"Fresh but make it Elegant"字幕，闭眼讲解中，仍无产品展示</div></div>
+        <div class="carousel-slide"><img src="frames/gessicaamori_girlboss_t03.jpg" alt="t=29s"><div class="carousel-caption">t=29s · 同一固定机位，无场景变化，字幕消失但画面未变</div></div>
+        <div class="carousel-slide"><img src="frames/gessicaamori_girlboss_t04.jpg" alt="t=39s"><div class="carousel-caption">t=39s · 继续同一场景讲解，整个视频中段产品几乎不出现</div></div>
+        <div class="carousel-slide"><img src="frames/gessicaamori_girlboss_t05.jpg" alt="t=48s"><div class="carousel-caption">t=48s · 结尾仍然是同一角度的面部特写讲解，缺乏产品展示和场景变化</div></div>
+      </div>
+      <button class="carousel-btn carousel-next" onclick="scrollCarousel('carousel-gessicaamori',1)">›</button>
+    </div>
+    <div class="card" style="margin-top:12px;border-left:4px solid var(--danger)">
+      <div style="font-weight:700;color:var(--danger);margin-bottom:6px">失败原因（基于实际画面）</div>
+      <ul style="font-size:.85rem;color:var(--text-light);padding-left:20px;line-height:1.8">
+        <li><strong>"Fresh but make it Elegant"文案不错：</strong>但视频内容没有兑现"Elegant"——卧室吊带自拍不是Elegant</li>
+        <li><strong>产品存在感极低：</strong>6帧中看不到产品正面展示，观众不知道在推什么</li>
+        <li><strong>零场景变化：</strong>全程同一角度同一背景，用户在3秒内就会划走</li>
+        <li><strong>主题标"Girlboss"但画面无关：</strong>没有任何Girl Boss的视觉元素（西装/办公/社交），纯粹是卧室selfie review</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CASE 5: Top 2 benchmark - astaririri -->
+  <div style="margin-bottom:32px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div>
+        <span style="background:#2980b9;color:#fff;padding:3px 10px;border-radius:10px;font-size:.75rem;font-weight:700">HIGH ROI</span>
+        <span style="font-weight:700;font-size:1.05rem;margin-left:8px">@astaririri · PGC - Top 2</span>
+      </div>
+      <div style="font-size:.8rem;color:var(--text-light)">500k-1M · ROI 4.03 · 花费$44.54 · GMV $179.54</div>
+    </div>
+    <div class="carousel" id="carousel-astaririri">
+      <button class="carousel-btn carousel-prev" onclick="scrollCarousel('carousel-astaririri',-1)">‹</button>
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="frames/astaririri_top2_t00.jpg" alt="t=0s"><div class="carousel-caption">t=0s · 分屏构图Hook：上方女生手持金色香水+大字"Apa"（什么），下方白色沙发场景+不同造型，制造好奇</div></div>
+        <div class="carousel-slide"><img src="frames/astaririri_top2_t01.jpg" alt="t=16s"><div class="carousel-caption">t=16s · 切换到另一造型，居家场景+粉色花朵背景</div></div>
+        <div class="carousel-slide"><img src="frames/astaririri_top2_t02.jpg" alt="t=33s"><div class="carousel-caption">t=33s · 手持Leona红色瓶，字幕"Wangi seger"（闻起来清新），白色开衫+黑色亮片抹胸</div></div>
+        <div class="carousel-slide"><img src="frames/astaririri_top2_t03.jpg" alt="t=49s"><div class="carousel-caption">t=49s · 继续详细讲解香调，面对镜头分享真实体验</div></div>
+        <div class="carousel-slide"><img src="frames/astaririri_top2_t04.jpg" alt="t=66s"><div class="carousel-caption">t=66s · 展示Bodibreze黄色/金色香水瓶身（Phoebe），用手指指向瓶身讲解</div></div>
+        <div class="carousel-slide"><img src="frames/astaririri_top2_t05.jpg" alt="t=82s"><div class="carousel-caption">t=82s · 继续对比评测，展示多款产品，提供真实使用感受对比</div></div>
+      </div>
+      <button class="carousel-btn carousel-next" onclick="scrollCarousel('carousel-astaririri',1)">›</button>
+    </div>
+    <div class="card" style="margin-top:12px;border-left:4px solid #2980b9">
+      <div style="font-weight:700;color:#2980b9;margin-bottom:6px">高ROI秘诀（基于实际画面）</div>
+      <ul style="font-size:.85rem;color:var(--text-light);padding-left:20px;line-height:1.8">
+        <li><strong>分屏Hook杀手锏：</strong>"Apa"（什么）+双场景分屏构图，悬念感十足，3秒留住用户</li>
+        <li><strong>真实评测感：</strong>"Wangi seger"（闻起来清新）是真实口语表达，不是念脚本</li>
+        <li><strong>多产品对比：</strong>同时展示Leona红瓶和Phoebe金瓶，"Top 2"排名自带权威性</li>
+        <li><strong>500k-1M粉丝量：</strong>中高层KOL自带信任背书，ROI 4.03性价比极高</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CASE 6: Wedding - taniaanglt -->
+  <div style="margin-bottom:32px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div>
+        <span style="background:var(--danger);color:#fff;padding:3px 10px;border-radius:10px;font-size:.75rem;font-weight:700">HIGH SPEND LOW ROI</span>
+        <span style="font-weight:700;font-size:1.05rem;margin-left:8px">@taniaanglt · PGC - Morning after wedding</span>
+      </div>
+      <div style="font-size:.8rem;color:var(--text-light)">500k-1M · ROI 0.02 · 花费$157 · GMV $3.15</div>
+    </div>
+    <div class="carousel" id="carousel-taniaanglt">
+      <button class="carousel-btn carousel-prev" onclick="scrollCarousel('carousel-taniaanglt',-1)">‹</button>
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="frames/taniaanglt_wedding_t00.jpg" alt="t=0s"><div class="carousel-caption">t=0s · 文字"Pov: waking up married"，男生在白色酒店床上睡觉，完全没有产品元素</div></div>
+        <div class="carousel-slide"><img src="frames/taniaanglt_wedding_t01.jpg" alt="t=4s"><div class="carousel-caption">t=4s · 继续婚后起床场景，酒店房间</div></div>
+        <div class="carousel-slide"><img src="frames/taniaanglt_wedding_t02.jpg" alt="t=8s"><div class="carousel-caption">t=8s · 切换到新娘视角，头巾+白色浴袍+手上henna彩绘，微笑，酒店浴室场景</div></div>
+        <div class="carousel-slide"><img src="frames/taniaanglt_wedding_t03.jpg" alt="t=12s"><div class="carousel-caption">t=12s · 继续浴室场景，开心的新婚氛围</div></div>
+        <div class="carousel-slide"><img src="frames/taniaanglt_wedding_t04.jpg" alt="t=16s"><div class="carousel-caption">t=16s · 手持Bodibreze Leona红瓶贴近脸部展示，浴袍+头巾场景</div></div>
+        <div class="carousel-slide"><img src="frames/taniaanglt_wedding_t05.jpg" alt="t=20s"><div class="carousel-caption">t=20s · 继续展示Leona产品，但整体视频重心在"婚后起床"而非产品</div></div>
+      </div>
+      <button class="carousel-btn carousel-next" onclick="scrollCarousel('carousel-taniaanglt',1)">›</button>
+    </div>
+    <div class="card" style="margin-top:12px;border-left:4px solid var(--danger)">
+      <div style="font-weight:700;color:var(--danger);margin-bottom:6px">$157花费仅换回$3.15 GMV — 失败分析</div>
+      <ul style="font-size:.85rem;color:var(--text-light);padding-left:20px;line-height:1.8">
+        <li><strong>开场0产品关联：</strong>前4秒是"男人睡觉"画面，完全没有香水/美妆元素，用户以为是vlog直接划走</li>
+        <li><strong>产品出现太晚：</strong>23秒视频直到约16秒才出现产品，70%的内容是婚礼vlog</li>
+        <li><strong>场景与购买意图脱节：</strong>"新婚起床"是极其私人的场景，无法让大多数用户代入</li>
+        <li><strong>500k-1M粉丝=高CPM：</strong>大号投婚礼内容花费$157，但婚礼受众与"想买Girl Boss香水"人群完全不重叠</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Summary comparison -->
+  <div class="gb-card">
+    <h3>帧拆解核心结论</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:.85rem">
+      <div>
+        <div style="font-weight:700;color:#2ecc71;margin-bottom:8px">ROI高的视频共同点</div>
+        <ul style="padding-left:18px;line-height:1.8">
+          <li>穿搭匹配人设（黑西装/手表 = Old Money）</li>
+          <li>Hook用态度宣言不用产品介绍（"不需要炫富">"looking for a scent"）</li>
+          <li>产品在前5秒就出现在画面中</li>
+          <li>有场景验证（车里/社交/办公室）</li>
+          <li>字幕提供具体卖点（"持久到第二天"）</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#e74c3c;margin-bottom:8px">ROI为0的视频共同点</div>
+        <ul style="padding-left:18px;line-height:1.8">
+          <li>穿着休闲（紫色T恤/吊带）说"成功女性"=言行不一</li>
+          <li>家居/卧室背景，无Girl Boss场景支撑</li>
+          <li>产品出现晚或不出现</li>
+          <li>全程同一机位无场景切换</li>
+          <li>文案标"Girlboss"但画面看不出来</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -818,6 +1055,26 @@ document.querySelectorAll('.bar-fill').forEach(bar => {
   const width = bar.style.width;
   bar.style.width = '0';
   setTimeout(() => { bar.style.width = width; }, 500);
+});
+
+// Carousel scroll function
+function scrollCarousel(id, dir) {
+  const track = document.querySelector('#' + id + ' .carousel-track');
+  if (!track) return;
+  const slideW = 216; // 200px + 16px gap
+  track.scrollBy({ left: dir * slideW * 2, behavior: 'smooth' });
+}
+
+// Touch/swipe support for mobile carousels
+document.querySelectorAll('.carousel-track').forEach(track => {
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      track.scrollBy({ left: diff > 0 ? 432 : -432, behavior: 'smooth' });
+    }
+  }, { passive: true });
 });
 </script>
 
