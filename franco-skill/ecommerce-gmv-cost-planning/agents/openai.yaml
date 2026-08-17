@@ -1,0 +1,4 @@
+interface:
+  display_name: "电商GMV与费用目标规划"
+  short_description: "规划并校验店铺GMV、品类产品、渠道费比与每日费用节奏"
+  default_prompt: "Use $ecommerce-gmv-cost-planning to build and validate a monthly ecommerce GMV and channel-cost plan."
